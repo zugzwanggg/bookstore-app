@@ -30,7 +30,6 @@ const Search = () => {
     'Horror',
     'Science',
     'Education',
-    "Literary Criticism",
     'Philosophy'
   ]
   
@@ -85,7 +84,7 @@ const Search = () => {
           </div>
           <div onMouseOver={()=>setIsFilter(true)} onMouseLeave={()=>setIsFilter(false)} className="relative w-36 mt-8">
             <button className={`bg-white border-solid border-black border-2 py-4 px-5 w-full rounded-3xl`}>Filter by</button>
-            <img onClick={()=>setIsCategory(prev=>!prev)} className={`absolute -right-1 top-1/2 -translate-y-1/2 p-4 ${!isFilter ? '-rotate-90': 'rotate-90'}`} src="./img/left.svg" alt="Search" />
+            <img onClick={()=>setIsFilter(prev=>!prev)} className={`absolute -right-1 top-1/2 -translate-y-1/2 p-4 ${!isFilter ? '-rotate-90': 'rotate-90'}`} src="./img/left.svg" alt="Search" />
             {isFilter 
             ?
             <ul className="w-ful z-10 text-black ml-1 border-solid border-black border-2 rounded-3xl w-full bg-white absolute flex flex-col">
