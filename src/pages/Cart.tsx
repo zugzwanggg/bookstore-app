@@ -23,7 +23,7 @@ const Cart = () => {
   
   
   return (
-    <div className={`max-w-lg fixed py-8 px-4 duration-500 bg-white top-0 right-0 z-30 w-full h-full ${isActive ? 'translate-x-0': 'translate-x-full'}`}>
+    <div className={`max-w-lg fixed py-8 px-4 duration-500 bg-white top-0 right-0 z-30 w-full h-screen ${isActive ? 'translate-x-0': 'translate-x-full'}`}>
       <div className="flex items-center gap-2">
         <img onClick={()=>dispatch(closeCart())} src="./img/left.svg"/>
         <p className="text-grayPrimary">Your Cart <span className="text-blue">({count} items)</span></p>
@@ -33,8 +33,8 @@ const Cart = () => {
         {
           cart.map(item=> {
             let img = `https://books.google.com/books/content?id=${item.id}&printsec=frontcover&img=1&zoom=2&edge=curl&source=gbs_api`
-            return <li key={item.id} className="border-dashed border-2 py-6 px-8 rounded-3xl border-grayPrimary flex justify-between gap-6">
-            <img onClick={()=>handleNavigation(item.id)} className="w-24 h-32" src={img} alt="" />
+            return <li key={item.id} className="border-dashed border-2 py-6 px-6 rounded-3xl border-grayPrimary flex justify-between gap-2">
+            <img onClick={()=>handleNavigation(item.id)} className="w-20 h-32" src={img} alt="" />
             <div className="w-48 flex flex-col justify-between">
               <p>{item.volumeInfo.title}</p>
               <small>{item.volumeInfo.authors?.map(item=>`${item}\n`)}</small>
