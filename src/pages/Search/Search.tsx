@@ -3,7 +3,6 @@ import { useAppDispatch,useAppSelector } from "../../hooks"
 import {useState} from 'react'
 import { addToCart, removeFromCart, setValue } from "../../features/cartSlice/cartSlice"
 import { useNavigate } from "react-router-dom"
-import {useEffect} from 'react'
 import IBook from "../../types"
 
 
