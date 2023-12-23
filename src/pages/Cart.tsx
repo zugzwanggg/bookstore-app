@@ -23,7 +23,7 @@ const Cart = () => {
   
   
   return (
-    <div className={`max-w-lg fixed py-8 px-4 duration-500 bg-white top-0 right-0 z-30 w-full h-screen ${isActive ? 'translate-x-0': 'translate-x-full'}`}>
+    <div className={`max-w-lg fixed py-4 px-4 duration-500 bg-white top-0 right-0 z-30 w-full h-screen ${isActive ? 'translate-x-0': 'translate-x-full'}`}>
       <div className="flex items-center gap-2">
         <img onClick={()=>dispatch(closeCart())} src="./img/left.svg"/>
         <p className="text-grayPrimary">Your Cart <span className="text-blue">({count} items)</span></p>
@@ -55,7 +55,7 @@ const Cart = () => {
           <p>&#160;</p>
         </li>
       </ul>
-      <div className="max-w-lg flex flex-col gap-4 fixed bg-white bottom-0 right-0 py-4 px-6 w-full border-2 border-t-black rounded-t-3xl text-black">
+      <div className="w-full flex flex-col gap-4 fixed bg-white bottom-0 right-0 py-4 px-6 border-2 border-black rounded-t-3xl text-black">
         <div className="flex items-center justify-between">
           <h1 className="text-lg">Subtotal:</h1>
           <span className="bg-yellow border-2 border-black rounded-3xl py-2 px-10 text-xl">{totalCost}</span>
