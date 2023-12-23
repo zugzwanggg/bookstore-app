@@ -1,0 +1,20 @@
+<svg width="151" height="128" viewBox="0 0 151 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="BookOpen">
+<path id="Vector" d="M75.3438 23.875C75.3438 17.8082 77.7538 11.9898 82.0437 7.69993C86.3336 3.41004 92.1519 1 98.2188 1H143.969C145.485 1 146.94 1.60251 148.013 2.67498C149.085 3.74746 149.688 5.20204 149.688 6.71875V98.2188C149.688 99.7355 149.085 101.19 148.013 102.263C146.94 103.335 145.485 103.938 143.969 103.938H98.2188C92.1519 103.938 86.3336 106.348 82.0437 110.637C77.7538 114.927 75.3438 120.746 75.3438 126.812" stroke="url(#paint0_linear_245_1873)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M1 98.2188C1 99.7355 1.60251 101.19 2.67498 102.263C3.74746 103.335 5.20204 103.938 6.71875 103.938H52.4688C58.5356 103.938 64.3539 106.348 68.6438 110.637C72.9337 114.927 75.3437 120.746 75.3438 126.812V23.875C75.3437 17.8082 72.9337 11.9898 68.6438 7.69993C64.3539 3.41004 58.5356 1 52.4688 1H6.71875C5.20204 1 3.74746 1.60251 2.67498 2.67498C1.60251 3.74746 1 5.20204 1 6.71875V98.2188Z" stroke="url(#paint1_linear_245_1873)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_245_1873" x1="112.516" y1="1" x2="112.516" y2="126.812" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3AB8EB"/>
+<stop offset="0.352083" stop-color="#F9784B"/>
+<stop offset="0.732292" stop-color="#FDBF0F"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_245_1873" x1="38.1719" y1="1" x2="38.1719" y2="126.812" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3AB8EB"/>
+<stop offset="0.352083" stop-color="#F9784B"/>
+<stop offset="0.732292" stop-color="#FDBF0F"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+</defs>
+</svg>
