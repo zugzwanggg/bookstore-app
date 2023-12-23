@@ -19,13 +19,21 @@ const Hero = () => {
     navigate(`search`)
   }
 
+  const handlekeydown = (e:React.KeyboardEvent<HTMLInputElement>) => {
+    
+    if (e.key =='Enter') {
+      dispatch(setValue(searchValue))
+      navigate(`search`)
+    }
+  }
+
   return (
     <section className="container flex items-center justify-between gap-9">
       <div className="md:w-1/2 w-full">
         <h1 className="md:text-6xl font-medium text-4xl flex items-center">What book you looking for?<img className="flex w-16 right-2" src="./img/bookgif.gif" alt="" /></h1>
         <p className="md:text-base text-grayPrimary text-sm mt-4 font-medium">Explore our catalog and find your next read.</p>
         <div className="relative mt-9">
-          <input value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} className={`border-solid outline-none border-black border-2 py-3 px-5 w-full rounded-3xl ${empty ? 'placeholder:text-red-500' : ''}`} placeholder={empty ? 'Cannot be empty!' : "Type the name of book or author..."} type="text" />
+          <input onKeyDown={handlekeydown} value={searchValue} onChange={(e)=>setSearchValue(e.target.value)} className={`border-solid outline-none border-black border-2 py-3 px-5 w-full rounded-3xl ${empty ? 'placeholder:text-red-500' : ''}`} placeholder={empty ? 'Cannot be empty!' : "Type the name of book or author..."} type="text" />
           <img onClick={handleClick} className="absolute right-0 top-1/2 -translate-y-1/2 p-4" src="./img/search.svg" alt="Search" />
           <span className="block absolute bg-yellow h-10 rounded-3xl w-full top-5 left-1 -z-10"></span>
         </div>

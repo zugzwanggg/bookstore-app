@@ -3,6 +3,7 @@ import { useAppDispatch,useAppSelector } from "../../hooks"
 import {useState} from 'react'
 import { addToCart, removeFromCart, setValue } from "../../features/cartSlice/cartSlice"
 import { useNavigate } from "react-router-dom"
+import {useEffect} from 'react'
 import IBook from "../../types"
 
 
@@ -44,7 +45,16 @@ const Search = () => {
     setIsFilter(false)
     setFilter(value)
   }
-  
+
+
+  const handlekeydown = (e:React.KeyboardEvent<HTMLInputElement>) => {
+    
+    if (e.key =='Enter') {
+      dispatch(setValue(searchValue))
+      setSearchValue("")
+    }
+  }
+
 
   const handleSubmit = () => {
     dispatch(setValue(searchValue))
@@ -55,7 +65,7 @@ const Search = () => {
     <div className="container">
       
       <div className="relative max-w-xl mx-auto mt-9">
-        <input name="searchInput" value={searchValue} onChange={e=>setSearchValue(e.target.value)} className={`border-solid border-black border-2 py-3 px-5 w-full rounded-3xl`} placeholder={"Type the name of book or author..."} type="text" />
+        <input onKeyDown={e=>handlekeydown(e)} name="searchInput" value={searchValue} onChange={e=>setSearchValue(e.target.value)} className={`border-solid border-black border-2 py-3 px-5 w-full rounded-3xl`} placeholder={"Type the name of book or author..."} type="text" />
         <button onClick={()=>handleSubmit()}><img className="absolute right-0 top-1/2 -translate-y-1/2 p-4" src="./img/search.svg" alt="Search" /></button>
         <span className="block absolute bg-yellow h-10 rounded-3xl w-full top-5 left-1 -z-10 "></span>
       </div>
